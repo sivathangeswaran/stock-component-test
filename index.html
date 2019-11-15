@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Component Template</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body ng-app="platformModule">
+    <div class="container">
+      <div>
+        <div class="row">
+          <div class="alert alert-info alert-dismissible" role="alert">
+            <strong>Component:</strong>
+            <!-- bind Component Name here from Route -->
+            &nbsp;<span>Stock Component</span>
+          </div>
+        </div>
+        <!-- Component Placeholder -->
+        <div class="row">
+          <div class="panel panel-default">
+            <!-- load component here -->
+            <stock-widget></stock-widget>   
+          </div>
+        </div>
+        <hr />
+      </div>
+    </div>
+    
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+    <script type="text/javascript">
+      angular.module("dms-package-tpls", []);
+    </script>
+    <!-- Component bundles -->
+    <script src="dist/stock.package.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

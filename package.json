@@ -1,0 +1,31 @@
+{
+  "name": "js-vn9rpk",
+  "version": "0.0.0",
+  "private": true,
+  "config": {
+    "appName": "default"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "@ngtools/webpack": "1.5.0",
+    "@uirouter/angularjs": "1.0.8",
+    "angular": "1.6.8",
+    "angular-templatecache-loader": "0.2.0",
+    "bootstrap": "^3.3.7",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "http://registry.npmjs.org/css-loader/-/css-loader-0.28.7.tgz",
+    "expose-loader": "^0.7.3",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^0.11.2",
+    "generate-json-webpack-plugin": "^0.2.2",
+    "style-loader": "^0.18.2",
+    "unminified-webpack-plugin": "1.4.2",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-concat-plugin": "^2.4.2",
+    "webpack-merge": "4.1.0",
+    "webpack-shell-plugin": "0.5.0"
+  }
+}
