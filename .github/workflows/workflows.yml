@@ -1,0 +1,19 @@
+name: code-ezee
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    name: npm build
+    runs-on: node:8-alpine
+    steps:
+    - name: Build
+      run: |
+        npm config set strict-ssl false
+        npm config set registry http://registry.npmjs.org
+
+        npm install
+        npm build
