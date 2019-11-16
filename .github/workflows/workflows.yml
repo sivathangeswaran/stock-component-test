@@ -17,4 +17,4 @@ jobs:
           npm config set registry http://registry.npmjs.org
 
           npm install
-          npm build
+          npm run build
