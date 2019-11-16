@@ -7,13 +7,14 @@ on:
 
 jobs:
   build:
-    name: npm build
-    runs-on: node:8-alpine
+    runs-on: ubuntu-16.04
     steps:
-    - name: Build
-      run: |
-        npm config set strict-ssl false
-        npm config set registry http://registry.npmjs.org
+      - uses: actions/checkout@v1
+      - name: Setup node
+        uses: actions/setup-node@v1
+      - run: |
+          npm config set strict-ssl false
+          npm config set registry http://registry.npmjs.org
 
-        npm install
-        npm build
+          npm install
+          npm build
