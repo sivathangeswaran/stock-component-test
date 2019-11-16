@@ -18,12 +18,21 @@ jobs:
 
           npm install
           npm run build
+      - name: Upload dist folder
+        uses: actions/upload-artifact@v1
+        with:
+          name: package
+          path: dist
   
   deploy:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - name: Download dist folder
+      uses: actions/download-artifact@v1
+      with:
+        name: package
     - uses: jakejarvis/s3-sync-action@master
       with:
         args: --acl public-read --follow-symlinks --delete
